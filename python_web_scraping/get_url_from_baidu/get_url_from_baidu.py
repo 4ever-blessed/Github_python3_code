@@ -24,4 +24,5 @@ result_url = re.findall(r"\"fromURL\":\"(.+?)\",\"",str_page_source)
 file = open("result.txt",'w')
 for item in result_url:
     file.write(repr(item.strip("\'")))
+    file.write("\n")
 file.close()
